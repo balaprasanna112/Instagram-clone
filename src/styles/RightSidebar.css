@@ -1,0 +1,58 @@
+
+.right-sidebar {
+  width: 319px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  padding-top: 4px;
+}
+
+.me-row,
+.suggest-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.me-row {
+  margin-bottom: 20px;
+}
+
+.me-text {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.3;
+}
+
+.suggest-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.see-all {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.suggest-row {
+  margin-bottom: 14px;
+}
+
+.follow-btn {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.follow-btn.following {
+  color: var(--gray-text);
+}
+
+.footer-links {
+  color: #c7c7c7;
+  font-size: 11px;
+  margin-top: 18px;
+  line-height: 1.6;
+}

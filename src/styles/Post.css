@@ -1,0 +1,164 @@
+
+.post {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.post-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.post-user {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.25;
+}
+
+.post-location {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-image-box {
+  position: relative;
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.post-image {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.big-heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  color: white;
+  pointer-events: none;
+  animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0 4px;
+}
+
+.post-actions .icon-btn {
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+.post-actions > button {
+  padding-right: 0;
+}
+
+.post-likes {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.post-caption {
+  margin-bottom: 4px;
+}
+
+.hashtag {
+  color: #00376b;
+}
+
+body.dark .hashtag {
+  color: #e0f1ff;
+}
+
+.view-comments {
+  color: var(--gray-text);
+  margin: 4px 0;
+  display: block;
+}
+
+.comment-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 2px 0;
+}
+
+.small-heart {
+  font-size: 12px;
+  color: var(--gray-text);
+}
+
+.small-heart.liked {
+  color: var(--red);
+}
+
+.post-time {
+  font-size: 10px;
+  color: var(--gray-text);
+  letter-spacing: 0.4px;
+  margin: 8px 0;
+}
+
+.add-comment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: var(--light-gray);
+  border-radius: 4px;
+}
+
+.add-comment input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  min-width: 0;
+}
+
+.post-btn {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.post-btn.faded {
+  opacity: 0.4;
+}

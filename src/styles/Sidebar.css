@@ -1,0 +1,174 @@
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  border-right: 1px solid var(--border-color);
+  padding: 8px 12px 20px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+  z-index: 1200;
+}
+
+.sidebar-logo {
+  padding: 25px 12px 18px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  display: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 12px;
+  margin: 4px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: left;
+  position: relative;
+}
+
+.menu-item:hover {
+  background: var(--light-gray);
+}
+
+.menu-item.active {
+  background: var(--light-gray);
+  font-weight: 700;
+}
+
+.menu-item i {
+  font-size: 24px;
+}
+
+.menu-avatar {
+  width: 26px;
+  height: 26px;
+}
+
+.count-badge {
+  position: absolute;
+  left: 30px;
+  top: 6px;
+  background: var(--red);
+  color: white;
+  font-size: 11px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.more-menu {
+  position: fixed;
+  left: 12px;
+  bottom: 70px;
+  width: 266px;
+  z-index: 1300;
+  background: var(--bg-color);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-color);
+}
+
+.more-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.more-item:hover {
+  background: var(--light-gray);
+}
+
+.more-item i {
+  font-size: 20px;
+}
+
+.more-divider {
+  height: 6px;
+  background: var(--light-gray);
+  margin: 6px -8px;
+}
+
+.mobile-top,
+.mobile-bottom {
+  display: none;
+}
+
+.mobile-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  z-index: 1000;
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.mobile-logo {
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mobile-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  z-index: 1000;
+  background: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mobile-icon {
+  font-size: 26px;
+  line-height: 1;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-icon.on {
+  color: var(--blue);
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1150;
+}

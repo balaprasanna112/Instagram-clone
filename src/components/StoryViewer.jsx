@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 function StoryViewer({ stories, index, onChange, onClose, onViewed, onToast }) {
   const story = stories[index];
@@ -9,21 +8,21 @@ function StoryViewer({ stories, index, onChange, onClose, onViewed, onToast }) {
   const [reply, setReply] = useState("");
   const [likedMap, setLikedMap] = useState({});
 
-  function goNext() {
+  const goNext = useCallback(() => {
     if (index < stories.length - 1) {
       onChange(index + 1);
     } else {
       onClose();
     }
-  }
+  }, [index, stories.length, onChange, onClose]);
 
-  function goPrev() {
+  const goPrev = useCallback(() => {
     if (index > 0) {
       onChange(index - 1);
     } else {
       setProgress(0);
     }
-  }
+  }, [index, onChange]);
 
   useEffect(() => {
     setProgress(0);
@@ -32,7 +31,7 @@ function StoryViewer({ stories, index, onChange, onClose, onViewed, onToast }) {
     if (story) {
       onViewed(story.id);
     }
-  }, [index]);
+  }, [index, onViewed, story]);
 
   useEffect(() => {
     if (paused) {
@@ -50,7 +49,7 @@ function StoryViewer({ stories, index, onChange, onClose, onViewed, onToast }) {
     if (progress >= 100) {
       goNext();
     }
-  }, [progress]);
+  }, [progress, goNext]);
 
   useEffect(() => {
     function handleKey(e) {
@@ -68,17 +67,17 @@ function StoryViewer({ stories, index, onChange, onClose, onViewed, onToast }) {
     return () => {
       window.removeEventListener("keydown", handleKey);
     };
-  }, [index]);
+  }, [goNext, goPrev]);
 
   if (!story) {
     return null;
   }
 
   function handleLike() {
-    setLikedMap({
-      ...likedMap,
-      [story.id]: !likedMap[story.id]
-    });
+    setLikedMap((previous) => ({
+      ...previous,
+      [story.id]: !previous[story.id]
+    }));
   }
 
   function handleReply(e) {

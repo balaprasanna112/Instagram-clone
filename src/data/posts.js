@@ -1,3 +1,9 @@
+import im2 from "../assets/im2.jpeg";
+import img1 from "../assets/img 1.jpeg";
+import img3 from "../assets/img3.jpeg";
+import trainVideo from "../assets/train.mp4";
+import v1Video from "../assets/v1.mp4";
+import vkVideo from "../assets/vk.mp4";
 
 export const samplePosts = [
   {
@@ -8,17 +14,17 @@ export const samplePosts = [
     location: "Wankhede Stadium, Mumbai",
     timeAgo: "1h",
     timeFull: "1 HOUR AGO",
-    image: "https://picsum.photos/seed/cricket1/800/1000",
+    image:  img1,
     likes: 2494,
     likedBy: "cricket_fever",
-    caption: "Pure passion under the lights! What a night of cricket 🏏🔥",
+    caption: "Pure passion 🏏🔥",
     hashtags: ["#TeamIndia", "#CricketLovers"],
     totalComments: 18492,
     comments: [
       {
         id: 101,
         username: "cricket_fever",
-        text: "That signature cover drive is pure poetry in motion! 👏"
+        text: "That shot ! 👏"
       },
       {
         id: 102,
@@ -35,7 +41,7 @@ export const samplePosts = [
     location: "Etihad Stadium, Manchester • Stadium Crowd Audio",
     timeAgo: "3h",
     timeFull: "3 HOURS AGO",
-    image: "https://picsum.photos/seed/football1/800/1000",
+    image: im2,
     likes: 842190,
     likedBy: "",
     caption: "Unbelievable scenes! Match winner in the 90th minute ⚽🏟",
@@ -57,17 +63,17 @@ export const samplePosts = [
     location: "Lord's Cricket Ground, London",
     timeAgo: "4h",
     timeFull: "4 HOURS AGO",
-    image: "https://picsum.photos/seed/cricket2/800/1000",
+    image: img3,
     likes: 638100,
     likedBy: "virat.kohli",
-    caption: "Test cricket at its finest. The art of swing bowling in full flight 🏏🌪",
+    caption: "Last night  🏏🌪",
     hashtags: ["#Lords", "#TestCricket"],
     totalComments: 3120,
     comments: [
       {
         id: 301,
         username: "virat.kohli",
-        text: "Masterclass of seam and swing!"
+        text: "The helicopter shot !"
       }
     ]
   },
@@ -79,7 +85,7 @@ export const samplePosts = [
     location: "Camp Nou, Barcelona",
     timeAgo: "6h",
     timeFull: "6 HOURS AGO",
-    image: "https://picsum.photos/seed/football2/800/1000",
+    image: im2,
     likes: 1924500,
     likedBy: "football.daily",
     caption: "Goal of the season candidate! Absolutely sensational acrobatics ⚽🔥",
@@ -113,26 +119,26 @@ export const exploreImages = [
 export const sampleReels = [
   {
     id: 1,
-    username: "cricket_fever",
+    username: "Train_fever",
     avatar: "https://i.pravatar.cc/150?img=33",
-    caption: "Nature is always good #plants",
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    caption: "Nature is always good #Train",
+    video: trainVideo,
     likes: 12400
   },
   {
     id: 2,
-    username: "football.daily",
+    username: "King_stories",
     avatar: "https://i.pravatar.cc/150?img=60",
-    caption: "Red roses  #Flowers",
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    caption: "Shot of the century #king#virat#king ",
+    video:vkVideo,
     likes: 8800
   },
   {
     id: 3,
-    username: "champions_league",
+    username: "nature_league",
     avatar: "https://i.pravatar.cc/150?img=68",
-    caption: "Matchday vibes at the stadium 🏟 #UCL",
-    video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    caption: "Matchday vibes  #Nature",
+    video:v1Video,
     likes: 20150
   }
 ];

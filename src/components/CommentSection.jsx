@@ -8,7 +8,7 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
 
   let commentsToShow = [];
 
-  // Get the comments from the post
+  
   if (post.comments) {
     if (showAll === true) {
       commentsToShow = post.comments;
@@ -17,13 +17,12 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
     }
   }
 
-  // Handle the comment input
   function handleCommentChange(e) {
     let value = e.target.value;
     setComment(value);
   }
 
-  // Add a new comment
+ 
   function handlePostComment(e) {
     e.preventDefault();
 
@@ -38,7 +37,6 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
     setComment("");
   }
 
-  // Like or unlike a comment
   function handleCommentLike(id) {
     let newLikes = { ...likes };
 
@@ -51,7 +49,6 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
     setLikes(newLikes);
   }
 
-  // Check whether a comment is liked
   function isCommentLiked(id) {
     if (likes[id] === true) {
       return true;
@@ -60,7 +57,6 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
     }
   }
 
-  // Get the correct heart icon
   function getHeartClass(id) {
     if (isCommentLiked(id)) {
       return "bi bi-heart-fill liked small-heart";
@@ -69,14 +65,12 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
     }
   }
 
-  // Check whether to show the View All button
   let showViewAllButton = false;
 
   if (post.totalComments > 0 && showAll === false) {
     showViewAllButton = true;
   }
 
-  // Get the text for the Post button
   let postButtonClass = "post-btn";
 
   if (comment.trim() === "") {
@@ -86,7 +80,7 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
   return (
     <div className="comment-section">
 
-      {/* View all comments button */}
+      {}
       {showViewAllButton && (
         <button
           className="view-comments"
@@ -96,7 +90,6 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
         </button>
       )}
 
-      {/* Display the comments */}
       {commentsToShow.map((c) => {
 
         return (
@@ -117,12 +110,10 @@ function CommentSection({ post, showAll, onShowAll, onComment, inputRef }) {
         );
       })}
 
-      {/* Display post time */}
       <div className="post-time">
         {post.timeFull}
       </div>
 
-      {/* Add a new comment */}
       <form
         className="add-comment"
         onSubmit={handlePostComment}
